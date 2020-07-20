@@ -1,65 +1,99 @@
 <template>
-  <div class="tabBar">
-    <div class="tabItem" @click="goFirst">
-      <i class="iconfont icon-shouye"></i>
-      <p>首页</p>
-    </div>
-    <div class="tabItem" @click="goFenlei">
-      <i class="iconfont icon-fenlei"></i>
-      <p>分类</p>
-    </div>
-    <div class="tabItem" @click="gobuy">
-      <i class="iconfont icon-mai"></i>
-      <p>值得买</p>
-    </div>
-    <div class="tabItem" @click="goCart">
-      <i class="iconfont icon-gouwuche"></i>
-      <p>购物车</p>
-    </div>
-    <div class="tabItem" @click="goPerson">
-      <i class="iconfont icon-geren"></i>
-      <p>个人</p>
-    </div>
-  </div>
+  <mt-tabbar
+    v-model="selected"
+    fixed
+    class="container"
+    style="background:white"
+  >
+    <mt-tab-item id="0" class="item">
+      <img
+        slot="icon"
+        src="https://yanxuan.nosdn.127.net/37520d1204a0c55474021b43dac2a69e.png"
+      />
+      首页
+    </mt-tab-item>
+    <mt-tab-item id="1" class="item">
+      <img
+        slot="icon"
+        src="https://yanxuan.nosdn.127.net/37520d1204a0c55474021b43dac2a69e.png"
+      />
+      分类
+    </mt-tab-item>
+    <mt-tab-item id="2" class="item">
+      <img
+        slot="icon"
+        src="https://yanxuan.nosdn.127.net/37520d1204a0c55474021b43dac2a69e.png"
+      />
+      值得买
+    </mt-tab-item>
+    <mt-tab-item id="3" class="item">
+      <img
+        slot="icon"
+        src="https://yanxuan.nosdn.127.net/37520d1204a0c55474021b43dac2a69e.png"
+      />
+      购物车
+    </mt-tab-item>
+    <mt-tab-item id="4" class="item">
+      <img
+        slot="icon"
+        src="https://yanxuan.nosdn.127.net/37520d1204a0c55474021b43dac2a69e.png"
+      />
+      个人
+    </mt-tab-item>
+  </mt-tabbar>
 </template>
 
 <script>
 export default {
-  methods: {
-    goFenlei() {
-      this.$router.push("/fenlei");
-    },
-    goFirst() {
-      this.$router.push("/first");
-    },
-    gobuy() {
-      this.$router.push("/buy");
-    },
-    goCart() {
-      this.$router.push("/cart");
-    },
-    goPerson() {
-      this.$router.push("/person");
+  data() {
+    return {
+      selected: 0,
+    };
+  },
+  watch: {
+    selected: function(val) {
+      switch (val) {
+        case "0":
+          this.$router.push("/first");
+          break;
+        case "1":
+          this.$router.push("/fenlei");
+          break;
+        case "2":
+          this.$router.push("/buy");
+          break;
+        case "3":
+          this.$router.push("/cart");
+          break;
+        case "4":
+          this.$router.push("/person");
+          break;
+      }
     },
   },
+  methods: {},
 };
 </script>
 
 <style lang="stylus">
-.tabBar
-  
+.container
   width 100%
-  height 97px
-  background pink
+  background-color white
   border-top: 1px solid #d9d9d9;
   display: flex
   align-items: center
   justify-content: space-around
-  .tabItem
+  .item
     display: flex
     flex-direction: column
-    align-items: center
     height 71px
-    .iconfont
-      font-size: 35px
+    line-height 71px
+    .mint-tab-item-icon
+      width 40px
+      height 40px
+      img
+        width 40px
+        height 40px
+    .mint-tab-item-label
+      font-size 25px
 </style>

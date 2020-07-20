@@ -1,17 +1,22 @@
-body,html
+body,html,#app
   width 100%
   height 100%
   #app
     width 100%
     height 100%
     position relative
-   
     .topContainer
       width 100%
+      .fixed
+        position fixed
+        left 0
+        top 0
+        z-index 3
+        height 148px
+        background-color white
       .top
         width 690px
         height 56px
-        background: pink;
         padding: 16px 30px;
         display flex
         align-items center
@@ -28,6 +33,7 @@ body,html
           display: flex
           justify-content: center
           .iconfont
+            font-size: 30px
             margin-right: 10px
             box-sizing: border-box
         .button
@@ -38,5 +44,236 @@ body,html
           line-height 38px
           border-radius: 1px solid red
           border-radius: 6px
-    
+      .wrapper
+        width 750px
+        height 60px
+        line-height: 60px
+        position relative
+        font-size 0
+        overflow hidden
+        .rightButton
+          position absolute
+          right 0
+          top 0
+          width 130px
+          height 60px
+          line-height 60px
+          background-color white
+          z-index 3
+          text-align center
+          .iconfont
+            font-size 30px
+        .content
+           position absolute;
+           left 0
+           bottom 0
+           font-size 12px;
+           text-align center;
+           list-style: none;
+           white-space: nowrap;
+           display: flex
+           padding-left 30px
+          .item
+            position relative
+            font-size: 27px
+            color: #333
+            display inline-block;
+            margin: 0 32px
+            box-sizing border-box
+            &.active::after
+              content ''
+              height 4px
+              width 130%
+              position absolute
+              bottom 0
+              left -13px
+              background #BB2C08
+      .hideList
+        position absolute
+        left 0
+        top  89px
+        width 750px
+        height 372px
+        background-color white
+        z-index 2
+        .header
+          width 720px
+          height 60px
+          line-height 60px
+          margin-left 30px
+          font-size 30px
+        .moreCate
+          width 750px
+          height 288px
+          padding-top 24px
+          background-color white
+          .item
+            width 148px
+            height 54px
+            background-color #FAFAFA
+            border 1px solid gray
+            margin 0 0 40px 30px
+      .hezi
+        width: 100%
+        height 148px
+      .zhongTitle
+        width 690px
+        height 72px
+        margin 0  30px
+        display flex
+        align-items: center
+        .item
+          width: 227px
+          height 36px
+          // background-color: pink
+          display flex
+          align-items center
+          img
+            width 32px
+            height 32px
+          p
+            margin-left 8px
+            font-size: 23px
+      .imgList
+        width 750px
+        height 341px
+        margin-bottom 32px
+        .item
+          width  110px
+          height 156px
+          background-color white
+          margin 10px 20px  9px 20px
+          float left
+          text-align center
+          img
+            width 110px
+            height 110px
+          p
+            margin-top 10px
+            font-size 24px
+      .guanggao
+        width 750px
+        height 322px
+        display flex
+        img
+          width 750px
+          height 322px
+      .guanggao2
+        width 716px
+        height 186px
+        padding 20px 15px
+        background-color #DD4444
+        img
+          width 351px
+          height 186px
+        .last
+          margin-left 8px
+      .newPerson
+        width 750px
+        height 528px
+        margin 20px 0px
+        // background-color pink
+        padding-bottom 30px
+        .title
+          width 690px
+          height 90px
+          margin 0 30px
+          p
+            width 160px
+            position relative
+            height 90px
+            margin 0 auto
+            line-height 90px
+            font-size 30px
+            padding-left 5px
+            box-sizing border-box
+            &:after
+              content ''
+              height 4px
+              width 24px
+              position absolute
+              top 45px
+              left -45px
+              background black
+             &:before
+              content ''
+              height 4px
+              width 24px
+              position absolute
+              top 45px
+              right -45px
+              background black
+        .group
+          display flex
+          margin-left 30px
+          .left
+            width 342px
+            height 434px
+            background #F9E9CF;
+            margin-right 4px
+            display inline-block
+            .title
+              width 313px
+              height 48px
+              padding 30px 0 0 30px
+              font-size: 35px
+              margin 0
+            .xinrenimg
+              width 258px
+              height 257px
+              margin 37px 42.5px 0 42.5px
+              
+               
+          .right
+            width 343px
+            height 438px
+            display flex
+            flex-direction column
+            .topa
+              width 343px
+              height 215px
+              background: #FBE2D3;
+              margin-bottom 4px
+              padding-top 10px
+             .picWrap
+               float right
+               position relative
+              .discount
+                position absolute
+                right 20px
+                top 12px
+                width 70px
+                height 70px
+                color: #fff;
+                text-align: center
+                line-height 80px
+                background: #F59524;
+                border-radius: 50%;
+              .wenzi
+                float left
+                .fu
+                  font-size 35px
+                  margin-top 10px
+            .bottom
+              width 343px
+              height 215px
+              background: #FFECC2
+              position relative
+              .wenzi1
+                position absolute
+                top 0
+                left -100px
+                .fu
+                  font-size 30px
+                  margin-top 10px
+                .one
+                   background: #CBB693;
+                   color white
+                   border-radius 10px
+      .bottom
+        width: 100%
+        height 97px
+
+        
+        
         
